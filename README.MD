@@ -1,3 +1,6 @@
+->For ease of access visit : https://decision-companion-s2mv.onrender.com/ 
+-> Deployed & Working!
+
 How to Run
 bash# 1. Clone or download the project
 cd decision-companion
@@ -19,4 +22,5 @@ Export to PDF — downloadable decision report
 AI-enriched explanations — use an LLM to generate a narrative paragraph justifying the top recommendation
 Persistent sessions — save and reload past comparisons
 Criteria conflict detection — warn if two criteria are highly correlated (e.g., "Budget" and "Luxury")
+
 Unit tests for the scoring engine
