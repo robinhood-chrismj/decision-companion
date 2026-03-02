@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The VagaBond — Tour Destination Recommender</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <div class="bg-texture"></div>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo">✦ The VagaBond</div>
+      <p class="tagline">Your new adventure awaits!</p>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- STEP 1: DESTINATIONS -->
+    <section class="card" id="section-destinations">
+      <div class="step-label">Step 1</div>
+      <h2>Where are you considering?</h2>
+      <p class="section-desc">Add 2 or more destinations you're choosing between.</p>
+
+      <div id="destination-list"></div>
+
+      <div class="input-row">
+        <input type="text" id="dest-input" placeholder="e.g. Bali, Indonesia" />
+        <button class="btn-add" onclick="addDestination()">+ Add</button>
+      </div>
+    </section>
+
+    <!-- STEP 2: CRITERIA -->
+    <section class="card" id="section-criteria">
+      <div class="step-label">Step 2</div>
+      <h2>What matters to you?</h2>
+      <p class="section-desc">Add criteria and set how important each one is (1 = low, 5 = high).</p>
+
+      <div id="criteria-list"></div>
+
+      <div class="input-row">
+        <input type="text" id="crit-input" placeholder="e.g. Budget, Weather, Safety..." />
+        <select id="crit-weight">
+          <option value="1">Weight: 1 (low)</option>
+          <option value="2">Weight: 2</option>
+          <option value="3" selected>Weight: 3</option>
+          <option value="4">Weight: 4</option>
+          <option value="5">Weight: 5 (high)</option>
+        </select>
+        <button class="btn-add" onclick="addCriterion()">+ Add</button>
+      </div>
+
+      <div class="quick-add">
+        <span>Quick add:</span>
+        <button onclick="quickAdd('Budget', 5)">💰 Budget</button>
+        <button onclick="quickAdd('Weather', 3)">🌤 Weather</button>
+        <button onclick="quickAdd('Safety', 4)">🛡 Safety</button>
+        <button onclick="quickAdd('Activities', 3)">🏄 Activities</button>
+        <button onclick="quickAdd('Visa Ease', 2)">🛂 Visa Ease</button>
+        <button onclick="quickAdd('Food', 2)">🍜 Food</button>
+      </div>
+    </section>
+
+    <!-- STEP 3: SCORING MATRIX -->
+    <section class="card" id="section-matrix">
+      <div class="step-label">Step 3</div>
+      <h2>Score each destination</h2>
+      <p class="section-desc">Rate how well each destination satisfies each criterion (1–10).</p>
+
+      <div id="matrix-container">
+        <p class="placeholder-text">Add destinations and criteria above to generate the scoring matrix.</p>
+      </div>
+    </section>
+
+    <!-- EVALUATE BUTTON -->
+    <div class="evaluate-wrap">
+      <button class="btn-evaluate" onclick="runEvaluation()">
+        ✦ Find My Best Destination
+      </button>
+    </div>
+
+    <!-- RESULTS -->
+    <section class="card" id="section-results" style="display:none;">
+      <div class="step-label">Results</div>
+      <h2>Your Recommendation</h2>
+      <div id="results-container"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Decision logic: Weighted Scoring Matrix — every score is traceable and explainable.</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
