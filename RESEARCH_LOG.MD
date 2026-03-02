@@ -1,10 +1,5 @@
 RESEARCH_LOG.md — Research & AI Usage Log
 
-Overview
-I prioritised avoiding the use of AI in any way in the implementation. Fuzzy logic seems more complex and Weighted Sum Model (WSM) is a much simpler approach to meet the requirement mentioned in the task given. 
-My priority is to demonstrate my ability to fulfil the given requirements in the simplest and a hastle-free way. I believe in minimalism and a straight-to-the-point approach.  
-->For ease of access visit : https://decision-companion-s2mv.onrender.com/ -> Deployed & Working!
-
 AI Prompts Used
 This project was developed with AI assistance. Below are the key prompts and what was accepted, modified, or rejected. The project would have taken more than a week if it wasn't with the help of AI. Helped me cut it short into 3 days!
 PromptOutputDecision "How should I structure a weighted scoring matrix for a decision support system?"Explanation of MCDA methods, formula for weighted scoringAccepted — used as the core algorithm , "What are edge cases I should handle in a scoring system with user-defined weights?, "Division by zero, single criterion, all-equal scoresAccepted and implemented in normalize_weights()"Generate a Flask app structure for a decision companion tool"Full project scaffoldModified — simplified folder structure, removed database"Write a CSS design for a travel-themed web app"Design system with variables, typography, and components", "Accepted and extended with custom animations"
@@ -46,5 +41,6 @@ Rejected from AI:
 Suggestion to use React — vanilla JS is sufficient and removes the build step. React seems to be an overkill.
 
 Suggestion to include an AI scoring model — conflicts with the "explainable, not a black box" requirement. Was one of the requirements put forward when the task as assigned.
+
 
 
