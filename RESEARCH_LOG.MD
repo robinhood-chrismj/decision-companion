@@ -2,6 +2,7 @@ RESEARCH_LOG.md — Research & AI Usage Log
 
 Overview
 I prioritised avoiding the use of AI in any way in the implementation. Fuzzy logic seems more complex and Weighted Sum Model (WSM) is a much simpler approach to meet the requirement mentioned in the task given. 
+My priority is to demonstrate my ability to fulfil the given requirements in the simplest and a hastle-free way. I believe in minimalism and a straight-to-the-point approach.  
 ->For ease of access visit : https://decision-companion-s2mv.onrender.com/ -> Deployed & Working!
 
 AI Prompts Used
@@ -45,4 +46,5 @@ Rejected from AI:
 Suggestion to use React — vanilla JS is sufficient and removes the build step. React seems to be an overkill.
 
 Suggestion to include an AI scoring model — conflicts with the "explainable, not a black box" requirement. Was one of the requirements put forward when the task as assigned.
+
 
